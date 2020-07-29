@@ -35,7 +35,7 @@ def extract_data(article_list):
         keywords = ''
 
         if 'pubmed_id' in article.keys():
-            if '\n' in article_list[5]['pubmed_id']:
+            if '\n' in article['pubmed_id']:
                 pubmed_id = article['pubmed_id'].split('\n')[0]
             else:
                 pubmed_id = article['pubmed_id']
