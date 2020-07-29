@@ -64,7 +64,7 @@ def extract_data(article_list):
         if 'keywords' in article.keys():
             keywords_list = article['keywords']
             if keywords_list:
-                keywords = ', '.join(article_list[2]['keywords'])
+                keywords = ', '.join(article['keywords'])
                 for keyword in keywords_list:
                     keywords_all.add(keyword)
 
