@@ -13,4 +13,4 @@ Ideas:
     * medications (e.g.: "metformin")
     * biomarkers (e.g.: "DHEA-S")
 * Build a search query from questions (e.g.: "Does protein restriction slow aging?")
-* Build a list of interventions and evaluate them.
+* Build a list of interventions and try to evaluate each one using the database of papers
