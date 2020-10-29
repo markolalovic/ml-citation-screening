@@ -9,8 +9,8 @@ Data is a small subset of [PubMed](https://pubmed.ncbi.nlm.nih.gov/) database us
 Ideas:
 
 * Expand the search terms to:
-    * interventions, e.g. calorie restriction
-    * medications, e.g. metformin
-    * biomarkers, e.g. DHEA-S
-* Build a search query from questions, e.g. does protein restriction slow aging?
+    * interventions (e.g.: "calorie restriction")
+    * medications (e.g.: "metformin")
+    * biomarkers (e.g.: "DHEA-S")
+* Build a search query from questions (e.g.: "Does protein restriction slow aging?")
 * Build a list of interventions and evaluate them.
