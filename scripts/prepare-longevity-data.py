@@ -10,8 +10,8 @@ def query_pubmed(search_term='longevity'):
     '''
     Using pymed API query PubMed database
     '''
-    pubmed = PubMed(tool='MyTool', email='marko.lalovic@yahoo.com')
-    results = pubmed.query(search_term, max_results=500)
+    pubmed = PubMed(tool='MyTool', email='marko@delphikos.com')
+    results = pubmed.query(search_term, max_results=2000)
 
     article_list = []
     for article in results:
@@ -79,7 +79,8 @@ def extract_data(article_list):
     return data
 
 if __name__ == '__main__':
-    article_list = query_pubmed()
+    dq_search_term = 'dasatinib AND (side effect* OR adverse event* OR adverse effect* OR risk*)'
+    article_list = query_pubmed(dq_search_term)
     data = extract_data(article_list)
 
     with open('../data/data.json', 'w') as outfile:

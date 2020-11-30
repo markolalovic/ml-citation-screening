@@ -1,16 +1,16 @@
 # longevity-research-exploration
-Building a prototype of a simple tool to explore the latest research in aging, geroscience and longevity. As a start by keyword only.
 
-The idea is to build a tool to help users evaluate and differentiate between anti-aging interventions with promising results and those with questionable results, e.g. based on unreproducible findings or contradicting other findings.
+This repository contains scripts and notebooks in Python to explore a subset of [PubMed](https://pubmed.ncbi.nlm.nih.gov/) database using [pymed](https://pypi.org/project/pymed/) API. (I've also been playing around with the unofficial [API for Sci-hub](https://github.com/zaytoun/scihub.py).)
 
-Data is a small subset of [PubMed](https://pubmed.ncbi.nlm.nih.gov/) database using [pymed](https://pypi.org/project/pymed/) API. You can find the demo: [here](https://observablehq.com/@markolalovic/exploring-research-papers-about-longevity).
+The idea is to develop this into a tool to support the effort of finding promising rejuvenation therapies, interventions or medications by exploring the latest research in aging, geroscience and longevity. One good example is: [Risk-Benefit Analysis](https://brain.forever-healthy.org/display/EN/Dasatinib+and+Quercetin+Senolytic+Therapy) done by [Forever Healthy Fundation](https://www.forever-healthy.org/rejuvenation-now.html).
 
+You can find a live demo of the developing tool: [here](https://observablehq.com/@markolalovic/exploring-research-papers-about-longevity)
 
-Ideas:
+TODO: Create features for evaluation based on:
 
-* Expand the search terms to:
-    * interventions (e.g.: "calorie restriction")
-    * medications (e.g.: "metformin")
-    * biomarkers (e.g.: "DHEA-S")
-* Build a search query from questions (e.g.: "Does protein restriction slow aging?")
-* Build a list of interventions and try to evaluate each one using the database of papers
+  * the amount and quality of the evidence,
+  * reproducibility, independent studies,
+  * conflicting studies or conflict of interest (funding),
+  * human or animal studies,
+  * methodological flaws, sample size.
+
