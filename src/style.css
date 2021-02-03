@@ -1,0 +1,75 @@
+body {
+  margin-top: 0%;
+  margin-left: 20%;
+  margin-right: 0%;
+  margin-bottom: 5%;
+}
+table {
+  font-family: verdana,arial,sans-serif;
+  font-size: 13px;
+  border-collapse: collapse;
+  width: 80%;
+  /* table-layout: fixed; */
+}
+th {
+  white-space: nowrap;
+  padding: 6px 6px;
+  margin: 0px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(219, 219, 219);
+}
+td {
+  width: 200px;
+  height: 20px;
+  white-space: nowrap;
+  padding: 6px 6px;
+  margin: 0px;
+  border: 1px solid rgb(100, 100, 100);
+  background-color: #edd0b09a;
+}
+.wide {
+  width: 360px;
+  height: 20px;
+  line-height: 150%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+td:hover {
+  background-color: #eddc6eda;
+  border: 1px solid;
+  /* whitesmoke */
+}
+svg {
+  width:90%;
+}
+svg > rect.bar {
+  fill: steelblue;
+  stroke: steelblue;
+}
+.content {
+  width: 500px;
+  position:absolute;
+  width:150px;
+  margin-top:-14px;    
+}
+input[type='checkbox'] { 
+    visibility: hidden; position: absolute; 
+}
+input[type='checkbox']:checked + .wide { 
+    height: auto; width: auto; white-space: pre-wrap; background-color: #eddc6eda; padding: 6px 6px;
+}
+a:link {
+  text-decoration: underline;
+  color: rgba(20, 20, 224, 0.979);
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color:blue;
+}
+a:active {
+  text-decoration: none;
+}
