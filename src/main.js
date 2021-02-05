@@ -1,8 +1,25 @@
+document.getElementById("defaultOpen").click();
+addPagerToTables('#table', 15);
+
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+  
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+  
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+  
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
 // Based on: 
 // https://stackoverflow.com/a/52356138/3997185
-
-addPagerToTables('#table', 20);
-
 function addPagerToTables(tables, rowsPerPage=10) {
   tables = 
       typeof tables == "string"
@@ -22,7 +39,7 @@ function addPagerToTable(table, rowsPerPage=10) {
   [].slice.call(
       table.querySelector('tr').cells
   )
-  .reduce((a,b) => a + parseInt(b.colSpan), 0);
+  .reduce((a,b) => a + parseInt(b.colSpan), 0); 
 
   table
   .createTFoot()
@@ -63,9 +80,9 @@ function addPagerToTable(table, rowsPerPage=10) {
               rowsPerPage
           )
       );
-  }   
+}   
 
-  function changeToPage(table, page, rowsPerPage) {
+function changeToPage(table, page, rowsPerPage) {
     let startItem = (page - 1) * rowsPerPage;
     let endItem = startItem + rowsPerPage;
     let navAs = table.querySelectorAll('.nav a');
@@ -83,14 +100,4 @@ function addPagerToTable(table, rowsPerPage=10) {
                 ? 'table-row'
                 : 'none';
     }
-  }
-
-var links = document.getElementsByClassName('changeable');
-
-function setLinkColor(e) {
-    e.target.style.textDecoration = 'none';
-}
-
-for (var i = 0; i < links.length; i++) {
-    links[i].addEventListener('click', setLinkColor);
 }

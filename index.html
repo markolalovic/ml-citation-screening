@@ -2,17 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <!-- <meta name="viewport" content="width=device-width"> -->
     <title>Longevity Research Screening</title>
     <link rel="stylesheet" type="text/css" href="./src/style.css" />
   </head>
   <body>
     <h2>Automated Screening of Aging and Longevity Research Citations for Risk-Benefit Analysis</h2>
-    <h3>Results for Dasatinib and Quercetin Senolytic Therapy Risk-Benefit Analysis</h3>
-    <p>In the table below are the results (estimated relevancy) for 223 articles from April 17, 2020 until February 2, 2021.</p>
-    <script src="./src/pytable.js"></script>
-    <script src="./src/pagination.js"></script>
-    <p>Note: You can toggle between showing and hiding the collapsible content by clicking on a particular title or abstract.</p>
-    <p><span style="background-color: #eddc6eda;">**Last updated: Mi 3. Feb 23:18:12 CET 2021**</span></p>
+      <h3>Results for Dasatinib and Quercetin Senolytic Therapy Risk-Benefit Analysis</h3>
+
+      <!-- Tab links -->
+      <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'NewArticles')" id="defaultOpen">New Articles</button>
+        <button class="tablinks" onclick="openTab(event, 'FalseNegatives')">False Negatives</button>
+        <button class="tablinks" onclick="openTab(event, 'FalsePositives')">False Positives</button>
+      </div>
+
+      <!-- Tab content -->
+      <div id="NewArticles" class="tabcontent">
+        <!-- For the Update of the Risk-Benefit Analysis -->
+        <p>In the table below are the estimated relevancies for the new articles 
+          from April 17, 2020 until February 2, 2021.</p>
+        <script src="./src/tableNewArticles.js"></script>
+      </div>
+
+      <div id="FalseNegatives" class="tabcontent">
+        <!-- For the Error Analysis of Misclassified Articles -->
+        <p>In the table below are the estimated relevancies for the articles until April 17, 2020 
+          that were included in the Risk-Benefit Analysis but were not classified as relevant.</p>
+        <script src="./src/tableFalseNegatives.js"></script>
+      </div>
+
+      <div id="FalsePositives" class="tabcontent">
+        <!-- For the Error Analysis of Misclassified Articles -->
+        <p>In the table below are the estimated relevancies for the articles until April 17, 2020 
+          that were classified as relevant but were not included in the Risk-Benefit Analysis.</p>
+        <script src="./src/tableFalsePositives.js"></script>        
+      </div>
+
+    <p>Note: You can toggle between showing and hiding the collapsible content by clicking on 
+      a particular title or abstract. Or follow the link to PubMed by clicking on a particular PMID.</p>
+    <p>**Last updated: Fr 5. Feb 12:54:52 CET 2021**</p>
+    <script src="./src/main.js"></script>
   </body>
 </html>

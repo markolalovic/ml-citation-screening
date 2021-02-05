@@ -9,49 +9,46 @@ table {
   font-size: 13px;
   border-collapse: collapse;
   width: 80%;
-  /* table-layout: fixed; */
 }
 th {
   white-space: nowrap;
   padding: 6px 6px;
   margin: 0px;
+  height: 20px;
   border: 1px solid rgb(0, 0, 0);
   background-color: rgb(219, 219, 219);
 }
 td {
-  width: 200px;
-  height: 20px;
+  width: 50px;
+  height: 20px;  
   white-space: nowrap;
-  padding: 6px 6px;
   margin: 0px;
+  padding: 6px 6px;    
   border: 1px solid rgb(100, 100, 100);
   background-color: #edd0b09a;
 }
 .wide {
-  width: 360px;
+  width: 400px;
   height: 20px;
-  line-height: 150%;
   overflow: hidden;
   text-overflow: ellipsis;
   cursor: pointer;
+  line-height: 150%;
 }
 td:hover {
   background-color: #eddc6eda;
-  border: 1px solid;
-  /* whitesmoke */
+  border: 1px solid rgb(100, 100, 100);
 }
 svg {
-  width:90%;
+  width: 160px;
+  height: 20px;
 }
 svg > rect.bar {
-  fill: steelblue;
-  stroke: steelblue;
+  fill: rgba(70, 131, 180, 0.95);
+  stroke: rgba(70, 131, 180, 0.95);
 }
-.content {
-  width: 500px;
-  position:absolute;
-  width:150px;
-  margin-top:-14px;    
+.content { 
+  margin-top: 0px;    
 }
 input[type='checkbox'] { 
     visibility: hidden; position: absolute; 
@@ -59,17 +56,51 @@ input[type='checkbox'] {
 input[type='checkbox']:checked + .wide { 
     height: auto; width: auto; white-space: pre-wrap; background-color: #eddc6eda; padding: 6px 6px;
 }
-a:link {
-  text-decoration: underline;
-  color: rgba(20, 20, 224, 0.979);
-}
-a:visited {
-  text-decoration: none;
-}
+/* page numbers */
 a:hover {
-  text-decoration: underline;
-  color:blue;
+  background-color: #eddc6eda;
 }
-a:active {
-  text-decoration: none;
+.active {
+  color: black;
+}
+a {
+  color: #0000EE;
+}
+/* tabs style */
+.tab {
+  overflow: hidden;
+  background-color: white;
+}
+.tablinks {
+  border: 0.1px solid white;
+  /* border: 1px solid rgb(153, 152, 152); */
+  border-radius: 3px 3px 0px 0px;
+  margin-left: 0px;
+  /* margin-right: 10px; */
+}
+.tab button {
+  border-bottom: 1px solid rgb(153, 152, 152);
+  font-size: 16px;
+  background-color: rgb(77, 75, 75);
+  color: white;  
+  float: left;
+  outline: none;
+  cursor: pointer;
+  padding: 5px 20px;
+}
+.tab button:hover {
+  /* color: black;
+  background-color: #eddc6eda; */
+  background-color: rgba(77, 75, 75, 0.95);
+}
+.tab button.active {
+  border: 1px solid rgb(153, 152, 152);
+  font-weight: bolder;
+  border-bottom: none;
+  color: black;
+  background-color: white;
+}
+.tabcontent {
+  border: none;
+  display: none;
 }
