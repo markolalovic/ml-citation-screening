@@ -1,5 +1,5 @@
 document.getElementById("defaultOpen").click();
-addPagerToTables('#table', 15);
+addPagerToTables('#table', 11);
 
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
