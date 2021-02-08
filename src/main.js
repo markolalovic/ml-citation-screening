@@ -1,3 +1,5 @@
+const rowsPerPage = 10; // number of rows per page
+
 const data = {
   'newArticles': newArticles,
   'falseNegatives': falseNegatives,
@@ -10,8 +12,9 @@ const captions = {
   'falsePositives': 'Estimated Relevance for False Positives until April 17, 2020 classified as relevant but not included in the Risk-Benefit Analysis.'
 };
 
-let selected = 'newArticles'; // default table selected
+const tableId = { 'newArticles': 1, 'falseNegatives': 2, 'falsePositives': 3 };
 
-document.getElementById("defaultOpen").click();
+initialize();
+addTime();
 
 console.log(`Window height: ${window.innerHeight}`); // 1054 in window or 1200 in full screen

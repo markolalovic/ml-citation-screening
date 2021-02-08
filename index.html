@@ -1,40 +1,44 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <title>Automated Screening Results</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
     <link rel="stylesheet" href="src/style.css">
-  </head>
-  <body>
+</head>
+
+<body>
     <h2>Automated Screening of Aging and Longevity Research Citations for Risk-Benefit Analysis</h2>
     <h3>Results for Dasatinib and Quercetin Senolytic Therapy Risk-Benefit Analysis</h3>
 
     <div class="tab">
-      <button class="tablinks" onclick="openTab(event, 'newArticles')" id="defaultOpen">New Articles</button>
-      <button class="tablinks" onclick="openTab(event, 'falseNegatives')">False Negatives</button>
-      <button class="tablinks" onclick="openTab(event, 'falsePositives')">False Positives</button>
+        <button class="tablinks" onclick="openTab(event, 'newArticles')" id="defaultOpen">New Articles</button>
+        <button class="tablinks" onclick="openTab(event, 'falseNegatives')">False Negatives</button>
+        <button class="tablinks" onclick="openTab(event, 'falsePositives')">False Positives</button>
     </div>
 
     <div id="newArticles" class="tabcontent">
-      <!-- For the Update of the Risk-Benefit Analysis -->
+        <!-- For the Update of the Risk-Benefit Analysis -->
+        <table id="tableNewArticles"></table>
     </div>
 
     <div id="falseNegatives" class="tabcontent">
-      <!-- For the Error Analysis of Misclassified Articles -->
+        <!-- For the Error Analysis of Misclassified Articles -->
+        <table id="tableFalseNegatives"></table>
     </div>
 
     <div id="falsePositives" class="tabcontent">
-      <!-- For the Error Analysis of Misclassified Articles -->
+        <!-- For the Error Analysis of Misclassified Articles -->
+        <table id="tableFalsePositives"></table>
     </div>
 
-    <script type="text/javascript" src="src/tableFalsePositives.js"></script>
-    <script type="text/javascript" src="src/tableFalseNegatives.js"></script>
     <script type="text/javascript" src="src/tableNewArticles.js"></script>
-    
+    <script type="text/javascript" src="src/tableFalseNegatives.js"></script>
+    <script type="text/javascript" src="src/tableFalsePositives.js"></script>
+
+    <script type="text/javascript" src="src/handleTabs.js"></script>
     <script type="text/javascript" src="src/handleTable.js"></script>
     <script type="text/javascript" src="src/handlePages.js"></script>
-    <script type="text/javascript" src="src/handleTabs.js"></script>
     <script type="text/javascript" src="src/main.js"></script>
-  </body>
+</body>
+
 </html>

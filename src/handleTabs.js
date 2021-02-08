@@ -1,10 +1,9 @@
+let selected = 'newArticles'; // default table selected
+document.getElementById("defaultOpen").click();
+
 function openTab(evt, tabName) {
-  const rowsPerPage = 10;
   selected = tabName;
   let i, tabcontent, tablinks;
-
-  removeTable();
-  removeTime();
 
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -18,11 +17,4 @@ function openTab(evt, tabName) {
 
   document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
-
-  let articles = data[tabName];
-  createTable(tabName);
-  loadTable(articles);
-  addPagerToTables('#table', rowsPerPage);
-  addTime();
 }
-
