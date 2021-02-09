@@ -23,7 +23,7 @@ function addPagerToTable(table, rowsPerPage = 10) {
     .createTFoot()
     .insertRow()
     .innerHTML = `
-    <td style="background-color: rgba(220, 220, 220, 0.7)" colspan=${colCount}>
+    <td class="pager" colspan=${colCount}>
       <div class="nav">
           Page: 
       </div>

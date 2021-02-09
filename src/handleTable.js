@@ -15,7 +15,8 @@ function createTable(tabName) {
   let table = document.getElementById(tableName)
 
   let caption = table.createCaption();
-  caption.textContent = captions[tabName];
+  const content = `Table ${captionsTable[tabName]}: ${captionsText[tabName]}`;
+  caption.textContent = content;
 
   let tHead = table.createTHead();
   let row = tHead.insertRow();
