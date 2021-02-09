@@ -1,5 +1,5 @@
 body {
-    width: 80%;
+    width: 85%;
     margin: 0px auto;
     color: rgb(44, 44, 44);
 }
@@ -10,28 +10,28 @@ table {
     border-collapse: collapse;
     border: 1px solid rgb(15, 15, 15);
     margin: 0px auto;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 
 /* Page: */
 
 .nav {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
 }
 
 .changeable {
-    font-size: 14px;
+    font-size: 13px;
     padding: 10px;
 }
 
 thead th:nth-child(1) {
-    width: 10%;
+    width: 9%;
 }
 
 thead th:nth-child(2) {
-    width: 12%;
+    width: 15%;
 }
 
 thead th:nth-child(3) {
@@ -47,7 +47,7 @@ thead th:nth-child(5) {
 }
 
 thead th:nth-child(6) {
-    width: 10%;
+    width: 8%;
 }
 
 
@@ -92,7 +92,7 @@ caption {
     font-style: bold;
     caption-side: top;
     color: rgb(7, 7, 7);
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
 }
 
@@ -140,7 +140,7 @@ a {
 /* tabs style */
 
 .tab button {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     color: #0000EE;
     outline: none;
