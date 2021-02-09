@@ -13,19 +13,6 @@ table {
     font-size: 15px;
 }
 
-
-/* Page: */
-
-.nav {
-    font-size: 15px;
-    font-weight: bold;
-}
-
-.changeable {
-    font-size: 14px;
-    padding: 10px;
-}
-
 thead th:nth-child(1) {
     width: 9%;
 }
@@ -64,7 +51,7 @@ top, right, bottom, left */
 
 tr:nth-child(odd) td,
 tr:nth-child(odd) td {
-    padding: 5px 5px 3px 5px;
+    padding: 15px 5px 13px 5px;
 }
 
 tr:nth-child(even) td,
@@ -73,7 +60,7 @@ tr:nth-child(even) td {
 }
 
 tbody tr:nth-child(odd) {
-    background-color: ghostwhite;
+    background-color: white;
 }
 
 tbody tr:nth-child(even) {
@@ -144,8 +131,20 @@ td {
 
 /* page numbers */
 
+.nav {
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(44, 44, 44);
+    /* padding: 0px; */
+}
+
+.changeable {
+    font-size: 14px;
+    padding: 6px;
+}
+
 a:hover {
-    background-color: rgba(220, 220, 220, 0.726);
+    background-color: rgba(134, 134, 134, 0.426);
 }
 
 .active {

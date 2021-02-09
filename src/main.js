@@ -1,4 +1,4 @@
-const rowsPerPage = 9; // number of rows per page
+const rowsPerPage = 10; // number of rows per page
 
 const data = {
   'newArticles': newArticles,
