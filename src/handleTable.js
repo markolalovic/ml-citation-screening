@@ -94,7 +94,7 @@ function expand(rowNumber) {
 
   title.colSpan = '2';
 
-  title.innerHTML = '<div class="padded"><h3>' + data[selected][rowNumber - 1].title + '</h3>' +
+  title.innerHTML = '<div class="wrapped padded"><h3>' + data[selected][rowNumber - 1].title + '</h3>' +
     '<p><b>Abstract</b><br>' + data[selected][rowNumber - 1].abstract + '</p><div>';
   // transitions
 
