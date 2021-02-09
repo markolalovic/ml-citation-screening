@@ -49,21 +49,21 @@ top, right, bottom, left */
     padding: 0px 50px 0px 50px;
 }
 
-tr:nth-child(odd) td,
-tr:nth-child(odd) td {
+tr:nth-child(even) td,
+tr:nth-child(even) td {
     padding: 15px 5px 13px 5px;
 }
 
-tr:nth-child(even) td,
-tr:nth-child(even) td {
+tr:nth-child(odd) td,
+tr:nth-child(odd) td {
     padding: 2px 5px 0px 5px;
 }
 
-tbody tr:nth-child(odd) {
+tbody tr:nth-child(even) {
     background-color: white;
 }
 
-tbody tr:nth-child(even) {
+tbody tr:nth-child(odd) {
     background-color: gainsboro;
 }
 
@@ -94,6 +94,7 @@ caption {
 
 th {
     border: none;
+    border-bottom: 15px solid white;
     background-color: rgba(167, 167, 167, 0.7);
     color: rgb(27, 27, 27);
     /* font-weight: 800; */
@@ -111,7 +112,8 @@ th {
 top, right, bottom, left */
 
 td {
-    border: solid 1px white;
+    border: none;
+    border-bottom: white;
     vertical-align: top;
     transition-timing-function: ease-out;
     transition: 0.5s;
@@ -135,7 +137,8 @@ td {
     font-size: 15px;
     font-weight: bold;
     color: rgb(44, 44, 44);
-    /* padding: 0px; */
+    padding: 10px;
+    /* border: 2px solid white; */
 }
 
 .changeable {
