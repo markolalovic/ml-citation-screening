@@ -10,7 +10,7 @@ function initialize() {
 function createTable(tabName) {
   // add header to table
   // Relevance, Date, Title, Abstract, Expand, PMID
-  const header = ['Relevance', 'Date', 'Title', 'Abstract', 'Expand', 'PMID'];
+  const header = ['Relevance', 'Date', 'Title', 'Abstract', 'Expand', 'URL'];
   const tableName = 'table' + upperFirst(tabName);
   let table = document.getElementById(tableName)
 
@@ -63,12 +63,13 @@ function loadTable(tabName) {
     abstract.innerHTML = '<div class="nowrap padded" style="height: 20px; overflow:hidden;">' + abstractText + '</div>';
 
     let expandButton = row.insertCell(4);
+    const classSwitch = `switch${(i + 1) % 2}`;
     const idSwitch = `tab${tableId[tabName]}Switch${i + 1}`;
-    expandButton.innerHTML = `<input class="switch" type="button" value="+" id="${idSwitch}" onclick="switchFun(${i + 1});"></input>`;
+    expandButton.innerHTML = `<input class="${classSwitch}" type="button" value="+" id="${idSwitch}" onclick="switchFun(${i + 1});"></input>`;
 
     let linkButton = row.insertCell(5);
-    linkButton.innerHTML = '<a target="_blank" rel="noopener noreferrer" href="https://pubmed.ncbi.nlm.nih.gov/' +
-      articles[i].pmid + '/">' + articles[i].pmid + '</a>';
+    const url = articles[i].url;
+    linkButton.innerHTML = `<a target="_blank" rel="noopener noreferrer" href="${url}">${url.split('.')[0].substring(8)}</a>`;
   }
 }
 
@@ -137,7 +138,7 @@ function addTime() {
   let body = document.getElementsByTagName('body')[0];
   let timeOfUpdate = document.createElement('p');
   timeOfUpdate.id = 'time';
-  timeOfUpdate.appendChild(document.createTextNode('**Last updated: So 7. Feb 23:39:50 CET 2021**'));
+  timeOfUpdate.appendChild(document.createTextNode('Last updated: Do 25. Feb 11:38:01 CET 2021'));
   body.appendChild(timeOfUpdate);
 }
 

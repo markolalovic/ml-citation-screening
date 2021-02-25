@@ -14,19 +14,19 @@ table {
 }
 
 thead th:nth-child(1) {
-    width: 9%;
+    width: 8%;
 }
 
 thead th:nth-child(2) {
-    width: 15%;
+    width: 12%;
 }
 
 thead th:nth-child(3) {
-    width: 25%;
+    width: 30%;
 }
 
 thead th:nth-child(4) {
-    width: 25%;
+    width: 30%;
 }
 
 thead th:nth-child(5) {
@@ -147,11 +147,12 @@ td {
 }
 
 a:hover {
-    background-color: rgba(134, 134, 134, 0.426);
+    background-color: rgba(199, 196, 196, 0.426);
 }
 
 .active {
     color: black;
+    text-decoration: none;
 }
 
 a {
@@ -164,39 +165,77 @@ a {
 
 /* padding: top, right, bottom, left */
 
+.tab {
+    text-align: center;
+}
+
 .tab button {
+    /* border: none; */
+    border: 1px solid rgb(134, 134, 134);
     font-size: 14px;
-    font-weight: 500;
-    color: #0000EE;
+    font-weight: bolder;
+    color: #0000eee7;
+    background-color: rgba(189, 189, 189, 0.637);
     outline: none;
     cursor: pointer;
-    padding: 2px 5px 2px 5px;
-    font-weight: bolder;
+    padding: 2px 35px 2px 35px;
+    text-decoration: underline;
+}
+
+.tab button:hover {
+    background-color: rgba(134, 134, 134, 0.226);
 }
 
 .tab button.active {
+    /* border: none; */
     border: 1px solid rgb(134, 134, 134);
     font-weight: bolder;
     border-bottom: none;
     color: rgb(29, 29, 29);
     background-color: white;
+    text-decoration: none;
 }
 
-.switch {
-    padding: 0px 35px 0px 35px;
+.switch0 {
+    padding: 0px 25px 0px 25px;
+    font-size: 15px;
     cursor: pointer;
-    background-color: whitesmoke;
+    background-color: white;
     border: 1px solid #0000eea9;
     outline: none;
     color: #0000EE;
     font-weight: bold;
-    border-radius: 2px;
+    border-radius: 0px;
 }
 
-.switch:hover {
+.switch1 {
+    padding: 0px 25px 0px 25px;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: gainsboro;
+    border: 1px solid #0000eea9;
+    outline: none;
+    color: #0000EE;
+    font-weight: bold;
+    border-radius: 0px;
+}
+
+.switch0:hover {
+    background-color: rgb(233, 233, 233);
+}
+
+.switch1:hover {
     background-color: rgb(228, 228, 228);
 }
 
-.switch:active {
+.switch0:active {
     background-color: ghostwhite;
+}
+
+.switch1:active {
+    background-color: ghostwhite;
+}
+
+#time {
+    font-size: 14px;
 }
