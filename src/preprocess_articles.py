@@ -88,7 +88,7 @@ def check(articles):
     print('Number of relevant articles: %d' % sum(y))
 
 def add_title_label(title_lemmatized):
-    '''Adds `title:` to words in title to separate it from abstract.'''
+    '''Adds `title_` label to words in title to separate it from abstract.'''
 
     tokenised = [token for token in nlp(title_lemmatized)]
     labeled = list(map(lambda x: 'title_' + str(x), tokenised))

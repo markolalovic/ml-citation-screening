@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 ''' features_extraction.py - Contains all the functions for extracting features:
 
-    - get_simple(records): 1 if term in abstract or title for each search term.
-    - get_svd(records, fold): Truncated SVD from TF-IDF matrix from BoW.
-    - get_lda(records, fold): Distribution of LDA weights.
+    - get_stf(records): 1 if search term in abstract or title for each search term
+    - get_ptf(articles): 1 if publication type in main publication types for each publication type
+    - get_tf_idf(records, fold): TF-IDF matrix from BoW
+    - get_lda(records, fold): Distribution of LDA weights
 
 Also: combine(dataframes) and scale(X_train, X_test).
 '''
@@ -27,7 +28,7 @@ Dasatinib AND (side effect* OR adverse event* OR adverse effect* OR safety OR ri
 (quercetin AND (side effect* OR adverse effect* OR adverse event* OR risk)) \
 quercetin AND (senolytic OR senescent OR senescence)'
 
-RSTATE = 12345
+RSTATE = 42
 
 def get_stf(records):
     ''' Returns search term based features:
@@ -89,23 +90,13 @@ def get_ptf(articles):
                         index=[i for i in range(X.shape[0])],
                         columns=[pt.lower().replace(' ', '_') for pt in pt_all])
 
-def get_tf_idf(records, fold, train=False, max_features=300):
+def get_tf_idf(records, fold, train=False, max_features=50):
     ''' Returns TF-IDF matrix from BoW. '''
-
-# max_features=300,
-# ngram_range=(1, 2), # TODO: select ngrams
-# max_df=0.5,  # TODO: chose to ignore terms that appear in more than max_df of documents
-# min_df=0.01, # TODO: chose to ignore terms that appear in less than min_df of documents
-# sublinear_tf=True  ## apply 1 + log(tf) scaling (default=False)
-# Mean recall: 0.84 (0.08)
-# Mean precision: 0.22 (0.04)
-# Mean PR AUC: 0.32 (0.08)
-# Mean WSS@R: 0.64 (0.10)
 
     if train:
         vectorizer = TfidfVectorizer(
                         max_features=max_features,
-                        ngram_range=(1, 2), # TODO: select ngrams
+                        ngram_range=(2, 2), # TODO: select ngrams
                         max_df=0.5,  # TODO: chose to ignore terms that appear in more than max_df of documents
                         min_df=0.01, # TODO: chose to ignore terms that appear in less than min_df of documents
                         sublinear_tf=True  ## apply 1 + log(tf) scaling (default=False)
@@ -132,12 +123,6 @@ def get_tf_idf(records, fold, train=False, max_features=300):
                         columns=feature_names)
 
 def get_lda(records, fold, train=False, num_topics=50):
-    # 30 topics:
-# Mean recall: 0.82 (0.09)
-# Mean precision: 0.20 (0.03)
-# Mean PR AUC: 0.32 (0.06)
-# Mean WSS@R: 0.60 (0.09)
-
     texts = [record.split(' ') for record in records]
 
     if train:
