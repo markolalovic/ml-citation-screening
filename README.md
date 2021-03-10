@@ -2,7 +2,9 @@
 
 ## Longevity Research Screening
 
-This repository contains the source code for machine learning framework implemented in python to semi-automate citation screening in systematic reviews and meta-analyses. It uses the logistic regression model from scikit-learn. The front-end is implemented in JavaScript. The result are 3 interactive tables of exported documents accessible from a browser.
+This repository contains the source code for machine learning framework to semi-automate citation screening in systematic reviews and meta-analyses and all the tex files and figures for report and presentation slides.
+
+The framework is mostly implemented in python and uses the logistic regression model from scikit-learn library. The front-end is implemented in JavaScript. The result are 3 interactive tables of exported documents accessible from a browser.
 
 The framework was developed and evaluated in context of aging and longevity research studies and tested on a particular dataset related to "Dasatinib and Quercetin Senolytic Therapy Risk-Benefit Analysis" (D&Q Analysis) published by [Forever Healthy Foundation](https://brain.forever-healthy.org/display/EN/).
 
