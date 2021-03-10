@@ -44,7 +44,7 @@ $ sudo apt install mysql-server
 ```
 
 To re-create the dataset for D&Q Analysis, run python script `create_database.py`:
-```python
+```bash
 $ python3 ./src/create_database.py
 ```
 
@@ -66,7 +66,7 @@ TODO
 
 [1] Bannach-Brown, A., Przybyła, P., Thomas, J. et al. "Machine learning algorithms for systematic review: reducing workload in a preclinical review of animal studies and reducing human screening error.", Syst Rev 8, 23 (2019). [https://doi.org/10.1186/s13643-019-0942-7](https://doi.org/10.1186/s13643-019-0942-7)
 
-[2] Howard BE, Phillips J, Miller K, et al. "SWIFT-Review: a text-mining workbench for systematic review.", Syst Rev. 2016;5:87. Published 2016 May 23. [doi:10.1186/s13643-016-0263-z](doi:10.1186/s13643-016-0263-z)
+[2] Howard BE, Phillips J, Miller K, et al. "SWIFT-Review: a text-mining workbench for systematic review.", Syst Rev. 2016;5:87. Published 2016 May 23. [https://doi:10.1186/s13643-016-0263-z](https://doi:10.1186/s13643-016-0263-z)
 
 [3] O’Mara-Eves, A., Thomas, J., McNaught, J. et al. "Using text mining for study identification in systematic reviews: a systematic review of current approaches.", Syst Rev 4, 5 (2015). [https://doi.org/10.1186/2046-4053-4-5](https://doi.org/10.1186/2046-4053-4-5)
 
