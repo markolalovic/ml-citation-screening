@@ -69,12 +69,8 @@
 \begin{itemize}
 \item A systematic review typically addresses a specific clinical question by collecting and analyzing data from all the relevant and unbiased set of studies. 
 \item Citation screening is the first yet tedious task of narrowing down the large set of citations retrieved via a broad database query to those relevant for the review.
+\item Idea is to apply existing machine learning techniques to (semi) automate citation screening in systematic reviews, thereby reducing reviewers workload (and screening errors).
 \end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Idea}
-Develop a machine learning framework to semi-automate citation screening in systematic reviews and meta-analyses, thereby reducing reviewers workload (and screening errors).
 \end{frame}
 
 \begin{frame}
@@ -93,8 +89,8 @@ screening for a systematic review of pre-clinical animal studies.
 \begin{frame}
 \frametitle{Our Contribution}
 \begin{itemize}
-\item Present a simple machine learning framework that can be used in the screening stage of systematic reviews or meta-analyses of aging and longevity research studies.
-\item Present our experimental results on dataset related to \href{https://brain.forever-healthy.org/display/EN/}{Dasatinib and Quercetin Senolytic Therapy Risk-Benefit Analysis}\footnotemark (D\&Q Analysis).
+\item A simple machine learning framework that can be used in the screening stage of systematic reviews or meta-analyses of aging and longevity research studies.
+\item Evaluation on a dataset related to \href{https://brain.forever-healthy.org/display/EN/}{Dasatinib and Quercetin Senolytic Therapy Risk-Benefit Analysis (D\&Q Analysis)}\footnotemark.
 \end{itemize}
 \footnotetext[1]{The analysis is part of ``Rejuvenation Now" non-profit initiative that: ``seeks to continuously identify potential rejuvenation therapies and systematically evaluate their risks, benefits, and associated therapeutic protocols to create transparency" published by Forever Healthy Foundation.}%
 \end{frame}
@@ -116,21 +112,25 @@ Extracted features are based on:
 \item Provided list of search terms: dasatinib, senolytic, senescent, ...
 \item Possible publication types: case report, clinical trial, review, ...
 \item TF-IDF scores of terms: chronic myeloid, adverse event, tyrosine kinase, ...
-\item LDA model probabilities of belonging to topics: \\
+\item LDA model probabilities of belonging to topics:
 \end{itemize}
 \vspace{1mm}
 \centering
+\begin{table}
 \includegraphics[width=1\textwidth]{../report/tables/topics/topics-crop.pdf}
 ...
+\caption{Terms of the first 10 extracted topics.}
+\end{table}
 \end{frame}
 
 \begin{frame}
 \frametitle{Model}
 \begin{itemize}
-\item Used L1 regularized logistic regression model from scikit-learn.
+\item Used L1-regularized logistic regression model from scikit-learn.
 \item Fitted using Liblinear solver with balanced class weights. 
 \item Placed more emphasis on recall by using recall scorer.
-\end{itemize}
+\end{itemize} 
+
 \begin{definition}[Relevance]
 The model estimates the conditional probability, called {\it relevance score}, that a given document $d$ is relevant given feature vector $X^{d}$:
 $$
@@ -141,21 +141,21 @@ $$
 
 \begin{frame}
 \frametitle{Threshold Selection}
-The selected cut-off threshold for D\&Q Analysis was 0.26 where the binary classifier achieved 95\% recall:
 
-\begin{figure}[H]
+\begin{figure}
 \centering
-\includegraphics[width=0.7\textwidth]{../report/figures/threshold-selection/threshold-selection-crop.pdf}
+\includegraphics[width=0.6\textwidth]{../report/figures/threshold-selection/threshold-selection-crop.pdf}
+\caption{The selected cut-off threshold for D\&Q Analysis was 0.26 where the binary classifier achieved 95\% recall.}
 \end{figure}
 \end{frame}
 
 \begin{frame}
 \frametitle{Errors}
-There are four possible outcomes of comparing the classification result with human assigned label:
-\begin{figure}[H]
+\begin{table}
 \centering
 \includegraphics[width=0.4\textwidth]{../report/tables/confusion-matrix/confusion-matrix-crop.pdf}
-\end{figure}
+\caption{The four possible outcomes of comparing the classification result with human assigned label.}
+\end{table}
 \end{frame}
 
 \begin{frame}

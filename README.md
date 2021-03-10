@@ -6,27 +6,32 @@ This repository contains the source code for machine learning framework to semi-
 
 The framework is mostly implemented in python and uses the logistic regression model from scikit-learn library. The front-end is implemented in JavaScript. The result are 3 interactive tables of exported documents accessible from a browser.
 
-The framework was developed and evaluated in context of aging and longevity research studies and tested on a particular dataset related to "Dasatinib and Quercetin Senolytic Therapy Risk-Benefit Analysis" (D&Q Analysis) published by [Forever Healthy Foundation](https://brain.forever-healthy.org/display/EN/).
+The framework was developed and evaluated in context of aging and longevity research studies and tested on a particular dataset related to "Dasatinib and Quercetin Senolytic Therapy Risk-Benefit Analysis" (D&Q Analysis) published by [Forever Healthy Foundation](https://brain.forever-healthy.org/display/EN/). Link to the interactive tables of exported documents for D&Q Analysis: [https://markolalovic.com/longevity-research-screening/](https://markolalovic.com/longevity-research-screening/)
 
-## Links:
+Read more about this project and using these tables:
+
 * Technical report: [zenodo.4593957.pdf](https://zenodo.org/record/4593957/files/zenodo.4593957.pdf)
-* Presentation slides: [zenodo.4594311.pdf](https://zenodo.org/record/4594311/files/zenodo.4594311.pdf)
-* Interactive tables of exported documents for D&Q Analysis: [https://markolalovic.com/longevity-research-screening/
-](https://markolalovic.com/longevity-research-screening/)
-* MySQL database dump (5.4 MB) of the dataset for D&Q Analysis: [longevity_research.sql](https://zenodo.org/record/4593916/files/longevity_research.sql)
+* Presentation: [slides.pdf](https://zenodo.org/record/4594866/files/slides.pdf)
+---
 
-## How-to
+
+## How To
+
 The framework was developed and tested on Ubuntu 20.04.1 LTS. Technical overview of proposed framework is shown in figure bellow:
 
 <img src="report/diagrams/technical-overview/technical-overview.png" alt="Technical overview of proposed framework" width="1500">
 
+
+### Running the Model
 In `src` directory is a `Makefile` that creates python virtual environment in	`./src/longevity-research-screening-venv` and installs all the dependencies from `./src/requirements.txt`.
 
-For the simple model results, run:
+To get the results of a simple model that uses only binary features, run:
 ```bash
 $ cd src
 $ make run
 ```
+
+and you should see the results and updated plots in `figures` directory.
 
 The full model uses extracted features from LDA topic model constructed using Java-based package for statistical natural language processing called `Mallet`. To build `Mallet` you need to have Java and Apache `ant` build tool installed. On Debian based distro, run:
 ```bash
@@ -40,18 +45,35 @@ $ cd src
 $ make full
 ```
 
+### Pre-processing
 The framework uses a local MySQL database. To re-run the pre-processing steps you need to have mysql server installed. On Debian based distro, run:
 ```bash
 $ sudo apt install mysql-server
 ```
 
-To re-create the dataset for D&Q Analysis, run python script `create_database.py`:
+Then import the database dump (5.4 MB) of the dataset for D&Q Analysis: [longevity_research.sql](https://zenodo.org/record/4593916/files/longevity_research.sql) into the local MySQL database.
+
+Then, to execute all the pre-processing steps, run:
+```bash
+$ python3 preprocess_articles.py
+```
+
+### Create Database
+Besides mysql server you need to also have `chromedriver` tool for web-scraping. On Debian based distro you can download the latest release of `chromedriver` to `.src` directory by running `get_chromedriver.sh` script in `src` dir:
+```bash
+cd src
+./get_chromedriver.sh
+```
+
+Then, to re-create the dataset for D&Q Analysis, run python script `create_database.py`:
 ```bash
 $ python3 ./src/create_database.py
 ```
 
 The script queries PubMed database with provided search terms devised by Forever Healthy foundation using `pymed` API. Additionally, it scrapes some data directly from websites of journals or clinical trials (Clinical-
-Trials.gov) using `chromedriver`. Running `make full` also downloads `chromedriver` for scraping. The script creates a database called `longevity_research`. The retrieved data is saved into `longevity_research` database in `dasatinib_and_quercetin_senolytic_therapy` table.
+Trials.gov) using `chromedriver`. The script creates a database called `longevity_research`. The retrieved data is saved into `longevity_research` database in `dasatinib_and_quercetin_senolytic_therapy` table.
+
+It takes some time for the script to finish since it waits a certain time interval between calling get, to avoid to many requests in short time. The script prints the estimated time for scraping when started.
 
 ## Citing this work
 If you find this work useful, please consider citing it using the [Zenodo](https://zenodo.org/record/4593957/export/hx#.YEk4RftKhH4) record:

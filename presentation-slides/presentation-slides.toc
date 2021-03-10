@@ -1,4 +1,0 @@
-\babel@toc {english}{}
-\beamer@sectionintoc {1}{Background}{2}{0}{1}
-\beamer@sectionintoc {2}{Methods}{6}{0}{2}
-\beamer@sectionintoc {3}{Results}{12}{0}{3}
