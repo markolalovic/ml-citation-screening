@@ -236,6 +236,19 @@ a {
     background-color: ghostwhite;
 }
 
+
+/* TODO: remove */
+
 #time {
+    font-size: 14px;
+}
+
+.alignleft {
+    float: left;
+    font-size: 14px;
+}
+
+.alignright {
+    float: right;
     font-size: 14px;
 }

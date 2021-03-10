@@ -9,11 +9,11 @@ The framework is mostly implemented in python and uses the logistic regression m
 The framework was developed and evaluated in context of aging and longevity research studies and tested on a particular dataset related to "Dasatinib and Quercetin Senolytic Therapy Risk-Benefit Analysis" (D&Q Analysis) published by [Forever Healthy Foundation](https://brain.forever-healthy.org/display/EN/).
 
 ## Links:
-* Technical report: [TODO](link)
-* Presentation slides: [TODO](link)
+* Technical report: [zenodo.4593957.pdf](https://zenodo.org/record/4593957/files/zenodo.4593957.pdf)
+* Presentation slides: [zenodo.4594311.pdf](https://zenodo.org/record/4594311/files/zenodo.4594311.pdf)
 * Interactive tables of exported documents for D&Q Analysis: [https://markolalovic.com/longevity-research-screening/
 ](https://markolalovic.com/longevity-research-screening/)
-* MySQL database dump of the dataset for D&Q Analysis: [TODO](link)
+* MySQL database dump (5.4 MB) of the dataset for D&Q Analysis: [longevity_research.sql](https://zenodo.org/record/4593916/files/longevity_research.sql)
 
 ## How-to
 The framework was developed and tested on Ubuntu 20.04.1 LTS. Technical overview of proposed framework is shown in figure bellow:
@@ -54,14 +54,25 @@ The script queries PubMed database with provided search terms devised by Forever
 Trials.gov) using `chromedriver`. Running `make full` also downloads `chromedriver` for scraping. The script creates a database called `longevity_research`. The retrieved data is saved into `longevity_research` database in `dasatinib_and_quercetin_senolytic_therapy` table.
 
 ## Citing this work
-If you find this work useful, please consider citing it using the [Zenodo](link) record:
+If you find this work useful, please consider citing it using the [Zenodo](https://zenodo.org/record/4593957/export/hx#.YEk4RftKhH4) record:
 ```
-TODO
+Lalović, Marko. (2021, March 10). A Simple Machine Learning Framework to Aid Citation Screening in Systematic Reviews and Meta-Analyses of Aging and Longevity Research Studies. Zenodo. http://doi.org/10.5281/zenodo.4593957
 ```
 
 BibTeX entry:
 ```
-TODO
+@misc{lalovic_marko_2021_4593957,
+  author       = {Lalović, Marko},
+  title        = {{A Simple Machine Learning Framework to Aid 
+                   Citation Screening in Systematic Reviews and Meta-
+                   Analyses of Aging and Longevity Research Studies}},
+  month        = mar,
+  year         = 2021,
+  note         = {6 pages, 4 figures, 2 tables},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.4593957},
+  url          = {https://doi.org/10.5281/zenodo.4593957}
+}
 ```
 
 ## References

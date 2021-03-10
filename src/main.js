@@ -21,6 +21,5 @@ const captionsText = {
 const tableId = { 'newArticles': 1, 'falseNegatives': 2, 'falsePositives': 3 };
 
 initialize();
-addTime();
 
 console.log(`Window height: ${window.innerHeight}`); // 1054 in window or 1200 in full screen

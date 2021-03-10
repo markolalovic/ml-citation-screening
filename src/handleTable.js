@@ -134,14 +134,6 @@ function getCellId(tabName, rowNumber, colNumber) {
   return 'tab' + tableId[tabName] + 'Row' + rowNumber + 'Col' + colNumber;
 }
 
-function addTime() {
-  let body = document.getElementsByTagName('body')[0];
-  let timeOfUpdate = document.createElement('p');
-  timeOfUpdate.id = 'time';
-  timeOfUpdate.appendChild(document.createTextNode('Last updated: Do 25. Feb 11:38:01 CET 2021'));
-  body.appendChild(timeOfUpdate);
-}
-
 function upperFirst(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
