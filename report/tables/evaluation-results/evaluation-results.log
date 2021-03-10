@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.10.3)  4 MAR 2021 12:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.10.3)  9 MAR 2021 23:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -595,32 +595,27 @@ your preamble.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-PGFPlots: reading {../../data/evaluation_report_results.csv}
+PGFPlots: reading {./evaluation_report_results.csv}
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 27.
+(Font)              <7> on input line 21.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 27.
-
-Overfull \hbox (17.3851pt too wide) in paragraph at lines 27--28
-[][] 
- []
-
+(Font)              <5> on input line 21.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 (./evaluation-results.aux) ) 
 Here is how much of TeX's memory you used:
- 22536 strings out of 481239
- 600726 string characters out of 5920377
- 943334 words of memory out of 5000000
- 37466 multiletter control sequences out of 15000+600000
+ 22463 strings out of 481239
+ 598189 string characters out of 5920377
+ 940334 words of memory out of 5000000
+ 37394 multiletter control sequences out of 15000+600000
  532646 words of font info for 25 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  76i,7n,102p,736b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmr10.pfb>
-Output written on evaluation-results.pdf (1 page, 27912 bytes).
+Output written on evaluation-results.pdf (1 page, 26647 bytes).
 PDF statistics:
  19 PDF objects out of 1000 (max. 8388607)
  13 compressed objects within 1 object stream

@@ -1,11 +1,3 @@
-# Makefile - Creates python virtual environment in
-#		./src/longevity-research-screening-venv
-#
-# Installs dependencies from ./src/requirements.txt
-#
-# Downloads chromedriver in and Mallet to ./src dir.
-#
-
 VENV := longevity-research-screening-venv
 
 run:

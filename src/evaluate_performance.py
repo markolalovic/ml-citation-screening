@@ -5,10 +5,7 @@ the performance over the folds from CV.
 
 ## Evaluation:
 
-Overall recall: 0.80
-Overall precision: 0.28
-
-Evaluation report:
+Evaluation report for CUTOFF = 0.5:
  fold train_0 train_1 test_0 test_1 param_C support       recall    precision        prauc          wss
     1    2150     122    538     31     0.1      80         0.81         0.28         0.46         0.65
     2    2150     123    538     30     0.1      83         0.77         0.22          0.4         0.59
@@ -17,6 +14,15 @@ Evaluation report:
     5    2151     122    537     31     0.1      76         0.77         0.31          0.4         0.64
  Mean    2150     122    537     30    0.10  79 (2)  0.80 (0.03)  0.29 (0.04)  0.46 (0.07)  0.65 (0.04)
 
+
+Evaluation report for CUTOFF = 0.26:
+ fold train_0 train_1 test_0 test_1 param_C  support       recall    precision        prauc          wss
+    1    2150     122    538     31    0.01       17         0.94         0.13         0.54         0.53
+    2    2150     123    538     30    0.01       19          0.9         0.16         0.33         0.61
+    3    2150     123    538     30    0.01       16            1         0.14         0.48         0.63
+    4    2151     122    537     31    0.04       56         0.94         0.19         0.54         0.67
+    5    2151     122    537     31    0.02       35         0.97          0.2         0.43         0.71
+ Mean    2150     122    537     30    0.02  28 (15)  0.95 (0.03)  0.17 (0.03)  0.46 (0.08)  0.63 (0.06)
 '''
 
 import preprocess_articles as myprep
@@ -41,7 +47,7 @@ import sys
 
 RSTATE = 142
 NFOLDS = 5
-CUTOFF = 0.5
+CUTOFF = 0.26
 
 hist_fig, hist_axes = plt.subplots(1, NFOLDS, figsize=(20, 5))
 impo_fig, impo_axes = plt.subplots(1, NFOLDS, figsize=(20, 5))
@@ -51,7 +57,7 @@ mpl.use('pdf')
 
 
 def mean_performance(cfmat):
-    ''' Prints mean performance accross all folds from combined confusion matrix.'''
+    ''' Prints mean performance across all folds from combined confusion matrix.'''
 
     cfmat = cfmat / NFOLDS
     TN, FP, FN, TP = cfmat[0, 0], cfmat[0, 1], cfmat[1, 0], cfmat[1, 1]
@@ -62,7 +68,7 @@ def mean_performance(cfmat):
     print('Overall precision: %.2f' % precision)
 
 def add_mean_performance(results):
-    ''' Adds mean performance accross all folds from results matrix, returns it
+    ''' Adds mean performance across all folds from results matrix, returns it
     and saves it to: `../report/data/evaluation_report_results.csv` '''
 
     int_columns = ['fold', 'train_0', 'train_1', 'test_0', 'test_1', 'support']
@@ -126,20 +132,20 @@ def show_performance(plots, simple_features):
             if subplot == 1:
                 x, y = get_step_function(x, y)
 
-            axes[1-subplot].plot(x, y, label=label)
+            axes[subplot].plot(x, y, label=label)
 
-    axes[0].set_xlabel('Articles screened')
-    axes[0].set_ylabel('Cumulative Recall')
-    axes[0].legend(loc='lower right', fontsize='small')
-    axes[0].plot([0, 1], [0, 1], color='gray', ls='dashed')
-    axes[0].hlines(y=.95, xmin=0, xmax=1, ls='dotted', color='gray')
-    axes[0].vlines(x=.45, ymin=0, ymax=1, ls='dotted', color='grey')
+    axes[0].set_xlabel('Recall')
+    axes[0].set_ylabel('Precision')
+    axes[0].legend(loc='upper right', fontsize='small')
+    axes[0].axhline(y=0.05, color='gray', ls='dashed')
+    axes[0].vlines(x=.95, ymin=0, ymax=1, ls='dotted', color='grey')
 
-    axes[1].set_xlabel('Recall')
-    axes[1].set_ylabel('Precision')
-    axes[1].legend(loc='upper right', fontsize='small')
-    axes[1].axhline(y=0.05, color='gray', ls='dashed')
-    axes[1].vlines(x=.95, ymin=0, ymax=1, ls='dotted', color='grey')
+    axes[1].set_xlabel('Articles screened')
+    axes[1].set_ylabel('Cumulative Recall')
+    axes[1].legend(loc='lower right', fontsize='small')
+    axes[1].plot([0, 1], [0, 1], color='gray', ls='dashed')
+    axes[1].hlines(y=.95, xmin=0, xmax=1, ls='dotted', color='gray')
+    axes[1].vlines(x=.45, ymin=0, ymax=1, ls='dotted', color='grey')
 
     plt.subplots_adjust(bottom=0.15, wspace=0.5)
 
@@ -249,7 +255,7 @@ def get_model(X_train, y_train, param_C=0.03, tune_C=True):
 
     if tune_C:
         space = dict()
-        space['C'] = list(np.linspace(0.1, 1, num=200))
+        space['C'] = list(np.linspace(0.01, 1, num=200))
         recall_scorer = make_scorer(recall_score)
 
         cv_inner = KFold(n_splits=3, shuffle=True, random_state=RSTATE)
@@ -414,6 +420,9 @@ def evaluate_model(simple_features):
     y_probs_all = np.concatenate(y_probs_all)
     y_test_all = np.concatenate(y_test_all)
     precision_all, recall_all, _ = precision_recall_curve(y_test_all, y_probs_all)
+
+    ## save all probs for threshold selection histogram
+    pd.DataFrame({'y': y_probs_all}).to_csv(r'../report/data/y_probs_all.csv', index=False)
 
     ## estimate ranking performance
     y_test_list = list(y_test_all)

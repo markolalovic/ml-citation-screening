@@ -1,0 +1,51 @@
+\documentclass{article}
+
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{geometry}
+\usepackage{tkz-euclide}
+
+\newgeometry{vmargin={0mm}, hmargin={0mm,0mm}}
+
+\pgfplotsset{compat=1.16}
+% axis style, ticks, etc
+\pgfplotsset{every axis/.append style={
+                    label style={font=\footnotesize},
+                    tick label style={font=\footnotesize}  
+                    }}
+                    
+\pgfkeys{/pgfplots/tuftelike/.style={
+  thick,
+  tick style={major tick length=4pt, thick, black},
+  separate axis lines,
+  axis x line*=bottom,
+  axis x line shift=10pt,
+  xlabel shift=10pt,
+  axis y line*=left,
+  axis y line shift=10pt,
+  ylabel shift=10pt}}
+  
+\definecolor{fold1}{rgb}{ 0.651, 0.8078, 0.8902 }
+\definecolor{fold2}{rgb}{ 0.1216, 0.4706, 0.7059 }
+\definecolor{fold3}{rgb}{ 0.698, 0.8745, 0.5412 }
+\definecolor{fold4}{rgb}{ 0.2, 0.6275, 0.1725 }
+\definecolor{fold5}{rgb}{ 0.9843, 0.6039, 0.6 }
+\definecolor{overall}{rgb}{ 0.9059, 0.1608, 0.5412 }
+\definecolor{baseline}{rgb}{ 0.4, 0.4, 0.4 }
+
+\begin{document}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.48\linewidth}        %% or \columnwidth
+        \centering
+        \input{plot1.tikz}        
+    \end{subfigure}
+    \begin{subfigure}[b]{0.48\linewidth}        %% or \columnwidth
+        \centering
+		\input{plot2.tikz}        
+    \end{subfigure}
+\end{figure}
+
+\end{document}

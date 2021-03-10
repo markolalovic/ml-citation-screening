@@ -13,16 +13,10 @@
     string type,
     assign column name/.style={/pgfplots/table/column name={\textbf{#1}}},
     columns/fold/.style={column name=Fold, column type={l}},
-    columns/train_0/.style={column name=Train 0, column type={l}},
-    columns/train_1/.style={column name=Train 1, column type={l}},
-    columns/test_0/.style={column name=Test 0, column type={l}},
-    columns/test_1/.style={column name=Test 1, column type={l}},    
-    columns/param_C/.style={column name=C, column type={l}},
-    columns/support/.style={column name=Support, column type={l}},    
     columns/recall/.style={column name=Recall, column type={l}},    
     columns/precision/.style={column name=Precision, column type={l}},
     columns/prauc/.style={column name=PR-AUC, column type={l}},
     columns/wss/.style={column name=WSS@R, column type={l}},
 	every even row/.style={before row={\rowcolor[gray]{0.9}}},
-    ]{../../data/evaluation_report_results.csv}
+    ]{./evaluation_report_results.csv}
 \end{document}

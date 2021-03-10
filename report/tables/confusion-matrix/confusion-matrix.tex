@@ -1,0 +1,30 @@
+% based on:
+% https://tex.stackexchange.com/questions/20267/how-to-construct-a-confusion-matrix-in-latex
+
+\documentclass{article}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{multirow}
+
+\newcommand\MyBox[2]{
+  \fbox{\lower0.75cm
+    \vbox to 1.7cm{\vfil
+      \hbox to 1.7cm{\hfil\parbox{1.4cm}{#1\\#2}\hfil}
+      \vfil}%
+  }%
+}
+
+\begin{document}
+\thispagestyle{empty}
+\noindent
+\renewcommand\arraystretch{1.5}
+\setlength\tabcolsep{4pt}
+\begin{tabular}{c >{\bfseries}r @{\hspace{0.7em}}c @{\hspace{0.4em}}c @{\hspace{0.7em}}l}
+  \multirow{10}{*}{\rotatebox{90}{\parbox{5cm}{\bfseries\centering Labeled as relevant}}} & 
+    & \multicolumn{2}{c}{\bfseries Classified as relevant} & \\
+  & & \bfseries Yes & \bfseries No \\
+  & Yes & \MyBox{True}{Positive} & \MyBox{False}{Negative} \\[2.4em]
+  & No & \MyBox{False}{Positive} & \MyBox{True}{Negative}
+\end{tabular}
+
+\end{document}

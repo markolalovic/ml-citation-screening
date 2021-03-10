@@ -1,0 +1,33 @@
+\begin{thebibliography}{1}
+
+\bibitem{mining-review}
+A.~O’Mara-Eves, J.~Thomas, J.~McNaught, M.~Miwa, and S.~Ananiadou, ``Using
+  text mining for study identification in systematic reviews: a systematic
+  review of current approaches.'' \url{https://doi.org/10.1186/2046-4053-4-5},
+  2015.
+
+\bibitem{semi-automated}
+B.~C. Wallace, T.~A. Trikalinos, J.~Lau, C.~Brodley, and C.~H. Schmid,
+  ``Semi-automated screening of biomedical citations for systematic reviews.''
+  \url{https://doi.org/10.1186/1471-2105-11-55}, 2010.
+
+\bibitem{animal-studies}
+A.~Bannach-Brown, P.~Przybyła, J.~Thomas, A.~S.~C. Rice, S.~Ananiadou,
+  J.~Liao, and M.~R. Macleod, ``Machine learning algorithms for systematic
+  review: reducing workload in a preclinical review of animal studies and
+  reducing human screening error.''
+  \url{https://doi.org/10.1186/s13643-019-0942-7}, 2019.
+
+\bibitem{swift-workbench}
+B.~E. Howard, J.~Phillips, K.~Miller, A.~Tandon, D.~Mav, M.~R. Shah,
+  S.~Holmgren, K.~E. Pelch, V.~Walker, A.~A. Rooney, M.~Macleod, R.~R. Shah,
+  and K.~Thayer, ``Swift-review: a text-mining workbench for systematic
+  review.'' \url{https://doi.org/10.1186/s13643-016-0263-z}, 2016.
+
+\bibitem{robot-analyst}
+P.~Przybyła, A.~J. Brockmeier, G.~Kontonatsios, M.~Pogam, J.~McNaught, E.~Elm,
+  K.~Nolan, and S.~Ananiadou, ``Prioritising references for systematic reviews
+  with robotanalyst: A user study.'' \url{https://doi.org/10.1002/jrsm.1311},
+  2018.
+
+\end{thebibliography}

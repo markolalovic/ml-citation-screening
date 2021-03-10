@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage{pgfplotstable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{colortbl}
+
+\usepackage[left=1cm, right=2cm, top=2cm]{geometry}
+\begin{document}
+\thispagestyle{empty}
+
+\pgfplotstabletypeset[
+    col sep=semicolon,
+    string type,
+    assign column name/.style={/pgfplots/table/column name={\textbf{#1}}},
+    columns/topic/.style={column name=Topic, column type={r}},
+    columns/terms/.style={column name=Terms, column type={l}},
+	every even row/.style={before row={\rowcolor[gray]{0.9}}},
+    ]{../../data/topics.csv}
+\end{document}
