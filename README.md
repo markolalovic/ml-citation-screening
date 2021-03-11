@@ -12,7 +12,7 @@ This repository contains the source code of a research project to develop a mach
 
 The framework was developed and evaluated in context of aging and longevity research studies and tested on a particular dataset related to "Dasatinib and Quercetin Senolytic Therapy Risk-Benefit Analysis" (D&Q Analysis) published by [Forever Healthy Foundation](https://brain.forever-healthy.org/display/EN/). The results are in 3 interactive tables of exported documents accessible [here](https://markolalovic.com/longevity-research-screening/).
 
-You can find tech report [here](https://zenodo.org/record/4593957/files/zenodo.4593957.pdf) or check presentation [slides](https://zenodo.org/record/4594866/files/slides.pdf) for a quick overview.
+You can find the tech report [here](https://zenodo.org/record/4593957/files/zenodo.4593957.pdf) or check the presentation [slides](https://zenodo.org/record/4594866/files/slides.pdf) for a quick overview.
 
 ---
 
