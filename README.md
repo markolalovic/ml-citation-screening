@@ -100,17 +100,6 @@ Trials.gov) using `chromedriver`. The script creates a database called `longevit
 
 It takes some time for the script to finish since it waits a certain time interval between calling get, to avoid to many requests in short time. The script prints the estimated time for scraping when started.
 
-## Related Work
-[1] Bannach-Brown, A., Przybyła, P., Thomas, J. et al. "Machine learning algorithms for systematic review: reducing workload in a preclinical review of animal studies and reducing human screening error.", Syst Rev 8, 23 (2019). [https://doi.org/10.1186/s13643-019-0942-7](https://doi.org/10.1186/s13643-019-0942-7)
-
-[2] Howard BE, Phillips J, Miller K, et al. "SWIFT-Review: a text-mining workbench for systematic review.", Syst Rev. 2016;5:87. Published 2016 May 23. [https://doi:10.1186/s13643-016-0263-z](https://doi:10.1186/s13643-016-0263-z)
-
-[3] O’Mara-Eves, A., Thomas, J., McNaught, J. et al. "Using text mining for study identification in systematic reviews: a systematic review of current approaches.", Syst Rev 4, 5 (2015). [https://doi.org/10.1186/2046-4053-4-5](https://doi.org/10.1186/2046-4053-4-5)
-
-[4] Przybyła P, Brockmeier AJ, Kontonatsios G, et al. "Prioritising references for systematic reviews with RobotAnalyst: A user study.", Res Synth Methods. 2018;9(3):470-488. [https://doi.org/10.1002/jrsm.1311](https://doi.org/10.1002/jrsm.1311)
-
-[5] Wallace, B.C., Trikalinos, T.A., Lau, J. et al. "Semi-automated screening of biomedical citations for systematic reviews.", BMC Bioinformatics 11, 55 (2010). [https://doi.org/10.1186/1471-2105-11-55](https://doi.org/10.1186/1471-2105-11-55)
-
 ## Citing this Work
 If you find this work useful, please cite:
 ```
