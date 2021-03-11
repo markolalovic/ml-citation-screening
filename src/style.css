@@ -246,9 +246,15 @@ a {
 .alignleft {
     float: left;
     font-size: 14px;
+    padding: 0px 35px 0px 0px;
 }
 
 .alignright {
     float: right;
     font-size: 14px;
+}
+
+.url {
+    font-size: 15px;
+    padding: 0px 20px 0px 20px;
 }

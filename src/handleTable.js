@@ -69,7 +69,9 @@ function loadTable(tabName) {
 
     let linkButton = row.insertCell(5);
     const url = articles[i].url;
-    linkButton.innerHTML = `<a target="_blank" rel="noopener noreferrer" href="${url}">${url.split('.')[0].substring(8)}</a>`;
+    const urlText = url.split('.')[0].substring(8);
+    // clinical trials pubmed
+    linkButton.innerHTML = `<a class="url" target="_blank" rel="noopener noreferrer" href="${url}">${urlText}</a>`;
   }
 }
 
