@@ -112,10 +112,11 @@ It takes some time for the script to finish since it waits a certain time interv
 [5] Wallace, B.C., Trikalinos, T.A., Lau, J. et al. "Semi-automated screening of biomedical citations for systematic reviews.", BMC Bioinformatics 11, 55 (2010). [https://doi.org/10.1186/1471-2105-11-55](https://doi.org/10.1186/1471-2105-11-55)
 
 ## Citing this Work
-If you find this work useful, please consider citing it using the [Zenodo](https://zenodo.org/record/4593957/export/hx#.YEk4RftKhH4) record:
+If you find this work useful, please cite:
 ```
 Lalović, Marko. (2021, March 10). A Simple Machine Learning Framework to Aid Citation Screening in Systematic Reviews and Meta-Analyses of Aging and Longevity Research Studies. Zenodo. http://doi.org/10.5281/zenodo.4593957
 ```
+Or by using [bib entry](https://zenodo.org/record/4593957/export/hx#.YEk4RftKhH4).
 
 ## License
 The code is released under MIT License. See the LICENSE file for more details.
