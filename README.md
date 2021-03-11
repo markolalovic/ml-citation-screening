@@ -20,7 +20,7 @@ You can find tech report [here](https://zenodo.org/record/4593957/files/zenodo.4
 
 Below are the results of 5-fold cross-validation we got on D&Q Analysis dataset.
 
-| Fold | precision | recall | prauc  | WSS@R |
+| Fold | Precision | Recall | PR-AUC  | WSS@R |
 | ---- |:---------:|:------:|:------:|:-----:|
 | 1 | 0.13 | 0.94 | 0.54 | 0.53 |
 | 2 | 0.16 | 0.90 | 0.33 | 0.61 |
@@ -28,7 +28,7 @@ Below are the results of 5-fold cross-validation we got on D&Q Analysis dataset.
 | 4 | 0.19 | 0.94 | 0.54 | 0.67 |
 | 5 | 0.20 | 0.97 | 0.43 | 0.71 |
 
-Below are PR-curves and WSS@R-curves we got on D&Q Analysis dataset.
+Below are PR-Curves and WSS@R-Curves we got on D&Q Analysis dataset.
 
 <p align="center">
 <img src="report/figures/performance-evaluation/combined/performance-evaluation.png" alt="Performance Evaluation Curves" width="1500">
@@ -100,17 +100,6 @@ Trials.gov) using `chromedriver`. The script creates a database called `longevit
 
 It takes some time for the script to finish since it waits a certain time interval between calling get, to avoid to many requests in short time. The script prints the estimated time for scraping when started.
 
-
-## Citing this Work
-If you find this work useful, please consider citing it using the [Zenodo](https://zenodo.org/record/4593957/export/hx#.YEk4RftKhH4) record:
-```
-Lalović, Marko. (2021, March 10). A Simple Machine Learning Framework to Aid Citation Screening in Systematic Reviews and Meta-Analyses of Aging and Longevity Research Studies. Zenodo. http://doi.org/10.5281/zenodo.4593957
-```
-
-## License
-The code is released under MIT License. See the LICENSE file for more details.
-
-
 ## Related Work
 [1] Bannach-Brown, A., Przybyła, P., Thomas, J. et al. "Machine learning algorithms for systematic review: reducing workload in a preclinical review of animal studies and reducing human screening error.", Syst Rev 8, 23 (2019). [https://doi.org/10.1186/s13643-019-0942-7](https://doi.org/10.1186/s13643-019-0942-7)
 
@@ -121,3 +110,12 @@ The code is released under MIT License. See the LICENSE file for more details.
 [4] Przybyła P, Brockmeier AJ, Kontonatsios G, et al. "Prioritising references for systematic reviews with RobotAnalyst: A user study.", Res Synth Methods. 2018;9(3):470-488. [https://doi.org/10.1002/jrsm.1311](https://doi.org/10.1002/jrsm.1311)
 
 [5] Wallace, B.C., Trikalinos, T.A., Lau, J. et al. "Semi-automated screening of biomedical citations for systematic reviews.", BMC Bioinformatics 11, 55 (2010). [https://doi.org/10.1186/1471-2105-11-55](https://doi.org/10.1186/1471-2105-11-55)
+
+## Citing this Work
+If you find this work useful, please consider citing it using the [Zenodo](https://zenodo.org/record/4593957/export/hx#.YEk4RftKhH4) record:
+```
+Lalović, Marko. (2021, March 10). A Simple Machine Learning Framework to Aid Citation Screening in Systematic Reviews and Meta-Analyses of Aging and Longevity Research Studies. Zenodo. http://doi.org/10.5281/zenodo.4593957
+```
+
+## License
+The code is released under MIT License. See the LICENSE file for more details.
