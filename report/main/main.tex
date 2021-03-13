@@ -66,8 +66,7 @@
 
 \usepackage{tikzpagenodes}
 
-\title{A Simple Machine Learning Framework to Aid Citation Screening in
-Systematic Reviews and Meta-Analyses of Aging and Longevity Research Studies}
+\title{A Simple Machine Learning Framework for Citation Screening of Aging and Longevity Research Studies}
 \author{%
 	Marko Lalović\thanks{\footnotesize{%
 	\url{mailto:marko@markolalovic.com}%
@@ -93,7 +92,7 @@ Systematic Reviews and Meta-Analyses of Aging and Longevity Research Studies}
 \node[align=left,text=black] at ([yshift=1em]current page text area.north west)%
 { 
 \hspace{46mm} \footnotesize{\texttt{TECHNICAL REPORT 10 March 2021}}\\
-\hspace{46mm} \footnotesize{\texttt{DOI: 10.5281/zenodo.4593957}}%
+\hspace{46mm} \footnotesize{\texttt{DOI: 10.5281/zenodo.4603365}}%
 };
 \end{tikzpicture}%
 
@@ -260,11 +259,9 @@ We get very similar estimates from combined confusion matrix across all folds si
 \end{itemize}
 
 \subsection{Export}
-We exported 267 retrieved documents from new papers published after the publication of D\&Q Analysis (April 17, 2020) sorted by relevance scores that were assigned by the final model trained on all the labeled documents to be used for the update of analysis. In addition, we exported all false negatives and false positives from labeled documents sorted by assigned relevance scores to identify potential screening errors made in the original review. 
+We exported 267 retrieved documents from new papers published after the publication of D\&Q Analysis (April 17, 2020) sorted by relevance scores that were assigned by the final model trained on all the labeled documents to be used for the update of analysis. In addition, we exported missclassified labeled documents to identify potential screening errors made in the original review. The result are 3 interactive tables of exported documents, shown in Figure~\ref{fig:export} and accessible online\footnote{\url{https://markolalovic.com/longevity-research-screening/}}. The user can expand each document to see the title and abstract of the corresponding paper or follow the provided url.
 
-The result are 3 interactive tables of exported documents, shown in Figure~\ref{fig:export} and accessible online\footnote{\url{https://markolalovic.com/longevity-research-screening/}}. The user can expand each document to see the title and abstract of the corresponding paper or follow the provided url.
-
-\subsection{Conclusion}
+\section{Conclusion}
 In this work, we have introduced a simple machine learning framework that can be used in the screening stage of systematic reviews or meta-analyses. We applied it to a particular dataset related to a specific risk-benefit analysis published by Forever Healthy Foundation. The empirical results show that by using the proposed framework, we are able to identify 95\% of relevant documents from a set of all documents retrieved via a broad database query. We estimated that reviewers can save an average of around 60\% of screening work comparing to unaided screening to achieve this result. The proposed system can already be used to prioritize the order in which papers are screened. Or as a "second screener" based on exported documents that the system falsely classified as relevant, to help identify potential screening errors made.
 
 More development is needed and validation on different datasets needs to be performed before using this framework to automatically remove studies for a review. The features should reflect what reviewers are looking for in a specific systematic review when deciding which paper is relevant. For example, they may be looking for effect size or try to detect large deviations in effect size. More collaboration with systematic review teams is needed to create such features. In the future, we would like to extend this work and evaluate it on different datasets.

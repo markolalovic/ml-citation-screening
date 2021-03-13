@@ -12,7 +12,7 @@ This repository contains the source code of a research project to develop a mach
 
 The framework was developed and evaluated in context of aging and longevity research studies and tested on a particular dataset related to "Dasatinib and Quercetin Senolytic Therapy Risk-Benefit Analysis" (D&Q Analysis) published by [Forever Healthy Foundation](https://brain.forever-healthy.org/display/EN/). The results are in 3 interactive tables of exported documents accessible [here](https://markolalovic.com/longevity-research-screening/).
 
-You can find the tech report [here](https://zenodo.org/record/4593957/files/zenodo.4593957.pdf) or check the presentation [slides](https://zenodo.org/record/4594866/files/slides.pdf) for a quick overview.
+You can find the tech report [here](https://zenodo.org/record/4603365/files/zenodo.4603365.pdf) or check the presentation [slides](https://zenodo.org/record/4603371/files/slides.pdf) for a quick overview.
 
 ---
 
@@ -105,7 +105,7 @@ If you find this work useful, please cite:
 ```
 Lalović, Marko. (2021, March 10). A Simple Machine Learning Framework to Aid Citation Screening in Systematic Reviews and Meta-Analyses of Aging and Longevity Research Studies. Zenodo. http://doi.org/10.5281/zenodo.4593957
 ```
-Or by using [bib entry](https://zenodo.org/record/4593957/export/hx#.YEk4RftKhH4).
+Or by using [bib entry](https://zenodo.org/record/4603365/export/hx#.YE09jvtKhH4).
 
 ## License
 The code is released under MIT License. See the LICENSE file for more details.
