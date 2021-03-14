@@ -103,7 +103,7 @@ It takes some time for the script to finish since it waits a certain time interv
 ## Citing this Work
 If you find this work useful, please cite:
 ```
-Lalović, Marko. (2021, March 10). A Simple Machine Learning Framework to Aid Citation Screening in Systematic Reviews and Meta-Analyses of Aging and Longevity Research Studies. Zenodo. http://doi.org/10.5281/zenodo.4593957
+Lalović, Marko. (2021, March 10). A Simple Machine Learning Framework for Citation Screening of Aging and Longevity Research Studies. Zenodo. http://doi.org/10.5281/zenodo.4603365
 ```
 Or by using [bib entry](https://zenodo.org/record/4603365/export/hx#.YE09jvtKhH4).
 
