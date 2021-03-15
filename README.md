@@ -10,15 +10,18 @@
 
 This repository contains the source code of a research project to develop a machine learning framework to semi-automate citation screening in systematic reviews and meta-analyses.
 
-The framework was developed and evaluated in context of aging and longevity research studies and tested on a particular dataset related to "Dasatinib and Quercetin Senolytic Therapy Risk-Benefit Analysis" (D&Q Analysis) published by [Forever Healthy Foundation](https://brain.forever-healthy.org/display/EN/). The results are in 3 interactive tables of exported documents accessible [here](https://markolalovic.com/longevity-research-screening/).
+The framework was developed and evaluated in context of aging and longevity research studies and tested on a particular dataset related to "Dasatinib and Quercetin Senolytic Therapy Risk-Benefit Analysis" (D&Q Analysis) published by <ins>[Forever Healthy Foundation](https://brain.forever-healthy.org/display/EN/)</ins>. The results are in 3 interactive tables of exported documents accessible <ins>[here](https://markolalovic.com/longevity-research-screening/)</ins>.
 
-You can find the tech report [here](https://zenodo.org/record/4603365/files/zenodo.4603365.pdf) or check the presentation [slides](https://zenodo.org/record/4603371/files/slides.pdf) for a quick overview.
+You can find the tech report <ins>[here](https://zenodo.org/record/4603365/files/zenodo.4603365.pdf)</ins> or check the presentation <ins>[slides](https://zenodo.org/record/4603371/files/slides.pdf)</ins> for a quick overview.
 
 ---
 
-## Results
+## Evaluation Results
 
-Below are the results of 5-fold cross-validation we got on D&Q Analysis dataset.
+The empirical results show that the proposed system can identify 95% of relevant documents on average with 17% precision. The overall performance of the system is reasonable,
+since the reviewers have to screen only around 35% of retrieved documents on average to achieve the desired 95% recall. This saves them around 60% of work comparing to random screening where they would need to screen 95% of documents on average to achieve the desired 95% recall.
+
+Below are the results we got on D&Q Analysis dataset tested on 153 labeled documents using 5-fold cross-validation procedure.
 
 | Fold | Precision | Recall | PR-AUC  | WSS@R |
 | ---- |:---------:|:------:|:------:|:-----:|
@@ -75,7 +78,7 @@ The framework uses a local MySQL database. To re-run the pre-processing steps yo
 sudo apt install mysql-server
 ```
 
-Then import the database dump (5.4 MB) of the dataset for D&Q Analysis: [longevity_research.sql](https://zenodo.org/record/4593916/files/longevity_research.sql) into the local MySQL database.
+Then import the database dump (5.4 MB) of the dataset for D&Q Analysis: <ins>[longevity_research.sql](https://zenodo.org/record/4593916/files/longevity_research.sql)</ins> into the local MySQL database.
 
 Then, to execute all the pre-processing steps, run:
 ```bash
