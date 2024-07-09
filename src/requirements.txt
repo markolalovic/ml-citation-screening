@@ -40,7 +40,7 @@ spacy-legacy==3.0.1
 srsly==2.4.0
 thinc==8.0.1
 threadpoolctl==2.1.0
-tqdm==4.57.0
+tqdm==4.66.3
 typer==0.3.2
 urllib3==1.26.19
 wasabi==0.8.2
