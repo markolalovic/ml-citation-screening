@@ -29,7 +29,7 @@ pymed==0.8.9
 pyparsing==2.4.7
 python-dateutil==2.8.1
 pytz==2021.1
-requests==2.25.1
+requests==2.32.2
 scikit-learn==1.5.0
 scipy==1.6.1
 selenium==3.141.0
