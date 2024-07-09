@@ -10,9 +10,11 @@
 
 This repository contains the source code of a research project to develop a machine learning framework to semi-automatize citation collection and screening in systematic reviews and meta-analyses.
 
-The framework was developed and evaluated in context of aging and longevity research studies and tested on a particular dataset related to "Dasatinib and Quercetin Senolytic Therapy Risk-Benefit Analysis" (D&Q Analysis) published by [Forever Healthy Foundation](https://brain.forever-healthy.org/display/EN/). The results are in 3 interactive tables of exported documents accessible [here](https://markolalovic.github.io/longevity-research-screening/).
+The framework was developed and evaluated in context of aging and longevity research studies and tested on a particular dataset related to "Dasatinib and Quercetin Senolytic Therapy Risk-Benefit Analysis" (D&Q Analysis) published by [Forever Healthy Foundation](https://brain.forever-healthy.org/display/EN/). 
 
-You can find the tech report [here](https://zenodo.org/record/4603365/files/zenodo.4603365.pdf) or check the presentation [slides](https://zenodo.org/record/4603371/files/slides.pdf) for a quick overview.
+The results are in 3 interactive tables of exported documents accessible: [here](https://dqanalysis.pages.dev/).
+
+You can read more about it [here](https://zenodo.org/record/4603365/files/zenodo.4603365.pdf) or check the presentation [slides](https://zenodo.org/record/4603371/files/slides.pdf) for a quick overview.
 
 ---
 
