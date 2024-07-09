@@ -1,6 +1,6 @@
-# Longevity Research Screening
+# ml-citation-screening
 
-**A Simple Machine Learning Framework for Citation Screening of Aging and Longevity Research Studies**
+**A Simple Machine Learning Framework for Assisted Citation Screening**
 
 <p align="center">
 <img src="report/diagrams/general-overview/general-overview.svg" alt="General overview of proposed framework" width="90%">
@@ -8,7 +8,7 @@
 
 ## Introduction
 
-This repository contains the source code of a research project to develop a machine learning framework to semi-automate citation screening in systematic reviews and meta-analyses.
+This repository contains the source code of a research project to develop a machine learning framework to semi-automatize citation collection and screening in systematic reviews and meta-analyses.
 
 The framework was developed and evaluated in context of aging and longevity research studies and tested on a particular dataset related to "Dasatinib and Quercetin Senolytic Therapy Risk-Benefit Analysis" (D&Q Analysis) published by [Forever Healthy Foundation](https://brain.forever-healthy.org/display/EN/). The results are in 3 interactive tables of exported documents accessible [here](https://markolalovic.github.io/longevity-research-screening/).
 
