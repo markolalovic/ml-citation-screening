@@ -24,7 +24,7 @@ Pillow==9.3.0
 pkg-resources==0.0.0
 preshed==3.0.5
 protobuf==3.18.3
-pydantic==1.7.3
+pydantic==1.10.13
 pymed==0.8.9
 pyparsing==2.4.7
 python-dateutil==2.8.1
