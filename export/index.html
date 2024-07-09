@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Automated Screening Results</title>
+    <meta
+      name="description"
+      content="Interactive tables of exported documents for citation screening of aging and longevity research studies."
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <h3>
+      Automated Screening of Aging and Longevity Research Citations for
+      Risk-Benefit Analysis
+    </h3>
+    <h4>
+      Results for Dasatinib and Quercetin Senolytic Therapy Risk-Benefit
+      Analysis
+    </h4>
+
+    <div class="tab">
+      <button
+        class="tablinks"
+        onclick="openTab(event, 'newArticles')"
+        id="defaultOpen"
+      >
+        New Articles
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'falseNegatives')">
+        False Negatives
+      </button>
+      <button class="tablinks" onclick="openTab(event, 'falsePositives')">
+        False Positives
+      </button>
+    </div>
+
+    <div id="newArticles" class="tabcontent">
+      <!-- For the Update of the Risk-Benefit Analysis -->
+      <table id="tableNewArticles"></table>
+    </div>
+
+    <div id="falseNegatives" class="tabcontent">
+      <!-- For the Error Analysis of Misclassified Articles -->
+      <table id="tableFalseNegatives"></table>
+    </div>
+
+    <div id="falsePositives" class="tabcontent">
+      <!-- For the Error Analysis of Misclassified Articles -->
+      <table id="tableFalsePositives"></table>
+    </div>
+
+    <script type="text/javascript" src="./tableNewArticles.js"></script>
+    <script type="text/javascript" src="./tableFalseNegatives.js"></script>
+    <script type="text/javascript" src="./tableFalsePositives.js"></script>
+
+    <script type="text/javascript" src="./handleTabs.js"></script>
+    <script type="text/javascript" src="./handleTable.js"></script>
+    <script type="text/javascript" src="./handlePages.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+
+    <div id="textbox">
+      <p class="alignleft">Last updated: Do 25. Feb 11:38:01 CET 2021</p>
+      <p class="alignright">
+        Read more about this project and using these tables:
+        <a
+          class="padding2"
+          href="https://zenodo.org/record/4603365/files/zenodo.4603365.pdf"
+          >tech report</a
+        >
+      </p>
+    </div>
+  </body>
+</html>

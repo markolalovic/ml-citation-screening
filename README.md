@@ -3,16 +3,16 @@
 **A Simple Machine Learning Framework for Citation Screening of Aging and Longevity Research Studies**
 
 <p align="center">
-<img src="report/diagrams/general-overview/general-overview.png" alt="General overview of proposed framework" width="1500">
+<img src="report/diagrams/general-overview/general-overview.svg" alt="General overview of proposed framework" width="90%">
 </p>
 
 ## Introduction
 
 This repository contains the source code of a research project to develop a machine learning framework to semi-automate citation screening in systematic reviews and meta-analyses.
 
-The framework was developed and evaluated in context of aging and longevity research studies and tested on a particular dataset related to "Dasatinib and Quercetin Senolytic Therapy Risk-Benefit Analysis" (D&Q Analysis) published by <ins>[Forever Healthy Foundation](https://brain.forever-healthy.org/display/EN/)</ins>. The results are in 3 interactive tables of exported documents accessible <ins>[here](https://markolalovic.github.io/longevity-research-screening/)</ins>.
+The framework was developed and evaluated in context of aging and longevity research studies and tested on a particular dataset related to "Dasatinib and Quercetin Senolytic Therapy Risk-Benefit Analysis" (D&Q Analysis) published by [Forever Healthy Foundation](https://brain.forever-healthy.org/display/EN/). The results are in 3 interactive tables of exported documents accessible [here](https://markolalovic.github.io/longevity-research-screening/).
 
-You can find the tech report <ins>[here](https://zenodo.org/record/4603365/files/zenodo.4603365.pdf)</ins> or check the presentation <ins>[slides](https://zenodo.org/record/4603371/files/slides.pdf)</ins> for a quick overview.
+You can find the tech report [here](https://zenodo.org/record/4603365/files/zenodo.4603365.pdf) or check the presentation [slides](https://zenodo.org/record/4603371/files/slides.pdf) for a quick overview.
 
 ---
 
@@ -34,7 +34,7 @@ Below are the results we got on D&Q Analysis dataset tested on 153 labeled docum
 Below are PR-Curves and WSS@R-Curves we got on D&Q Analysis dataset.
 
 <p align="center">
-<img src="report/figures/performance-evaluation/combined/performance-evaluation.png" alt="Performance Evaluation Curves" width="1500">
+<img src="report/figures/performance-evaluation/combined/performance-evaluation-crop.svg" alt="Performance Evaluation Curves" width="90%">
 </p>
 
 
@@ -46,7 +46,7 @@ The code is tested with Ubuntu 20.04.1 LTS. The framework is implemented in Pyth
 Below is an overview of the proposed framework.
 
 <p align="center">
-<img src="report/diagrams/technical-overview/technical-overview.png" alt="Technical overview of proposed framework" width="1500">
+<img src="report/diagrams/technical-overview/technical-overview-crop.svg" alt="Technical overview of proposed framework" width="90%">
 </p>
 
 ### Running the Model
@@ -78,7 +78,7 @@ The framework uses a local MySQL database. To re-run the pre-processing steps yo
 sudo apt install mysql-server
 ```
 
-Then import the database dump (5.4 MB) of the dataset for D&Q Analysis: <ins>[longevity_research.sql](https://zenodo.org/record/4593916/files/longevity_research.sql)</ins> into the local MySQL database.
+Then import the database dump (5.4 MB) of the dataset for D&Q Analysis: [longevity_research.sql](https://zenodo.org/record/4593916/files/longevity_research.sql) into the local MySQL database.
 
 Then, to execute all the pre-processing steps, run:
 ```bash
@@ -106,7 +106,7 @@ It takes some time for the script to finish since it waits a certain time interv
 ## Citing this Work
 If you find this work useful, please cite:
 ```
-Lalović, Marko. (2021, March 10). A Simple Machine Learning Framework for Citation Screening of Aging and Longevity Research Studies. Zenodo. http://doi.org/10.5281/zenodo.4603365
+Lalovic, Marko. (2021, March 10). A Simple Machine Learning Framework for Citation Screening of Aging and Longevity Research Studies. Zenodo. http://doi.org/10.5281/zenodo.4603365
 ```
 Or by using [bib entry](https://zenodo.org/record/4603365/export/hx#.YE09jvtKhH4).
 
