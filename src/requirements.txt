@@ -23,7 +23,7 @@ pathy==0.4.0
 Pillow==8.3.2
 pkg-resources==0.0.0
 preshed==3.0.5
-protobuf==3.15.2
+protobuf==3.18.3
 pydantic==1.7.3
 pymed==0.8.9
 pyparsing==2.4.7
